@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 module.exports = {
   entry: [
-    './Components/index'
+    './components/index'
   ],
   output: {
     path: path.join(__dirname, 'public'),
@@ -16,7 +16,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'Components')
+      include: path.join(__dirname, 'components')
     }]
   },
   plugins: [
