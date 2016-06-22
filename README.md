@@ -22,3 +22,4 @@ open http://localhost:3000
 npm start
 open http://localhost:3000
 ```
+By default the posts are connected to the Cosmic JS bucket `easy-mobx-example`.  [Sign up for Cosmic JS](https://cosmicjs.com) to add your own bucket, and edit the `config.js` file to point to your bucket.
