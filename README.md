@@ -11,13 +11,13 @@ git clone https://github.com/tonyspiro/easy-mobx-example
 cd easy-mobx-example
 npm install
 ```
-####Run development with hot reloading
+#####Run development with hot reloading
 
 ```
 npm run development
 open http://localhost:3000
 ```
-####Run production
+#####Run production
 ```
 npm start
 open http://localhost:3000
