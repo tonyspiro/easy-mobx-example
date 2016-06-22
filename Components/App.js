@@ -67,6 +67,7 @@ export default class App extends Component {
           <div><a href="https://mobxjs.github.io/mobx/" target="_blank">MobX</a> for state management</div>
           <div><a href="https://cosmicjs.com/?ref=easy-mobx-example" target="_blank">Cosmic JS</a> as the <a href="https://cosmicjs.com?ref=easy-mobx-example-cms-api" target="_blank">CMS API</a></div>
           <div><a href="https://www.npmjs.com/package/shorti" target="_blank">Shorti</a> for easy inline styling</div>
+          <div><iframe style={ S('border-none mt-10') } frameborder="0" src="https://ghbtns.com/github-btn.html?user=tonyspiro&repo=easy-mobx-example&type=star&count=true" scrolling="0" width="160px" height="30px"></iframe></div>
           <h3>Try it out!  Add some posts!</h3>
         </div>
         <div style={ S('mb-20') }>
