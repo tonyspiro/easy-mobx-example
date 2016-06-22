@@ -4,7 +4,7 @@
   "description": "Easy Example for MobX + React. Includes hot code reloading in development mode and minification in production mode.  Also includes a demonstration of how to hook up a CMS API and do database calls and loading states.",
   "scripts": {
     "development": "NODE_ENV=development node server-dev.js",
-    "start": "NODE_ENV=production webpack -p --config webpack.config.js; NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production webpack -p; NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
