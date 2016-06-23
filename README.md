@@ -5,6 +5,9 @@ This is an easy MobX example that uses [React](https://facebook.github.io/react)
 
 Supports ES6 and JSX compilation through babel.
 
+Check out the companion blog article to this repo here:<br />
+[Getting Started With MobX: An Easy Example](https://tonyspiro.com/getting-started-with-mobx-an-easy-example)
+
 ###Getting started
 ```
 git clone https://github.com/tonyspiro/easy-mobx-example
