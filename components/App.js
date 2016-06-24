@@ -5,6 +5,7 @@ import config from '../config'
 import { addObject, deleteObject } from 'cosmicjs'
 import slug from 'slug'
 import S from 'shorti'
+import DevTools from 'mobx-react-devtools';
 
 @observer
 export default class App extends Component {
@@ -59,6 +60,9 @@ export default class App extends Component {
         )
       })
     }
+    let dev_tools
+    if (config.env !== 'production')
+      dev_tools = <DevTools />
     return (
       <div style={ S('p-20') }>
         <h1 style={ S('mb-20') }>Easy MobX Example</h1>
@@ -82,6 +86,7 @@ export default class App extends Component {
           </form>
         </div>
         { posts_area }
+        { dev_tools }
       </div>
     )
   }
