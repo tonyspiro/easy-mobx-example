@@ -1,6 +1,6 @@
 Easy MobX Example
 =====================
-This is an easy MobX example that uses [React](https://facebook.github.io/react) for UI, [MobX](https://mobxjs.github.io/mobx) for state management, [Cosmic JS](https://cosmicjs.com) for the [CMS API](https://cosmicjs.com) and [Shorti](https://www.npmjs.com/package/shorti) for easy inline styles.
+This is an easy MobX example that uses [React](https://facebook.github.io/react) for UI, [MobX](https://mobxjs.github.io/mobx) for state management, [Cosmic JS](https://cosmicjs.com) for the [CMS API](https://cosmicjs.com) and [Shorti](https://www.npmjs.com/package/shorti) for easy inline styles.  View the [demo here](http://easy-mobx-example.cosmicapp.co/).
 
 Supports ES6 and JSX compilation through babel.
 
