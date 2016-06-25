@@ -28,7 +28,6 @@
     "babel-preset-stage-1": "^6.5.0",
     "eslint-plugin-react": "^5.1.1",
     "react-hot-loader": "^3.0.0-beta.2",
-    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
@@ -42,6 +41,7 @@
     "react-bootstrap": "^0.29.5",
     "react-dom": "^15.1.0",
     "shorti": "^1.1.6",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "webpack": "^1.13.1"
   }
 }
