@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import { FormGroup, FormControl, Input, Button } from 'react-bootstrap'
 import config from '../config'
-import { addObject, deleteObject } from 'cosmicjs'
 import slug from 'slug'
 import S from 'shorti'
 import DevTools from 'mobx-react-devtools';
@@ -18,27 +17,16 @@ export default class App extends Component {
     const content = this.props.data.form_data.content
     if (!title)
       return
-    const object = {
+    const post = {
       slug: slug(title),
       type_slug: 'posts',
       title,
       content
     }
-    this.props.data.is_saving = true
-    addObject({ bucket: config.cosmicjs.bucket }, object, (err, res) => {
-      this.props.data.is_saving = false
-      this.props.data.addPost(res.object)
-      this.props.data.form_data = {
-        title: '',
-        content: ''
-      }
-    })
+    this.props.data.addPost(post);
   }
   handleRemoveClick(post) {
-    this.props.data.removePost(post._id)
-    deleteObject({ bucket: config.cosmicjs.bucket }, { slug: post.slug }, (err, res) => {
-      // object deleted
-    })
+    this.props.data.removePost(post)
   }
   render() {
     const data = this.props.data
