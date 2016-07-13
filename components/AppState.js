@@ -1,5 +1,5 @@
 import { observable } from 'mobx'
-import { getObjects } from 'cosmicjs'
+import { getObjects, addObject, deleteObject } from 'cosmicjs'
 import config from '../config'
 
 export default class AppState {
@@ -7,12 +7,22 @@ export default class AppState {
   @observable form_data = {}
   @observable is_loading = true
   @observable is_saving = false
-  addPost(post) {
-    this.posts.unshift(post)
+  addPost(object) {
+    this.is_saving = true;
+    addObject({ bucket: config.cosmicjs.bucket }, object, (err, res) => {
+      this.is_saving = false
+      this.posts.unshift(res.object)
+      this.form_data = {
+        title: '',
+        content: ''
+      }
+    })
   }
-  removePost(post_id) {
-    this.posts = this.posts.filter(post => {
-      return post._id !== post_id
+  removePost(post) {
+    deleteObject({ bucket: config.cosmicjs.bucket }, { slug: post.slug }, (err, res) => {
+      this.posts = this.posts.filter(apost => {
+        return apost._id !== post._id
+      })
     })
   }
   constructor() {
